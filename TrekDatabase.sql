@@ -1,0 +1,25 @@
+CREATE TABLE trek_mountain_bikes(id INTEGER PRIMARY KEY, bike_name TEXT, gender TEXT, price INTEGER, quantity_available INTEGER);
+INSERT INTO trek_mountain_bikes VALUES (1, "820", "men", 489, 20);
+INSERT INTO trek_mountain_bikes VALUES (2, "Marlin 5", "men", 679, 25);
+INSERT INTO trek_mountain_bikes VALUES (3, "Marlin 6", "men", 819, 31);
+INSERT INTO trek_mountain_bikes VALUES (4, "Marlin 7", "men", 1039, 30);
+INSERT INTO trek_mountain_bikes VALUES (5, "X-Caliber 7", "men", 1249, 5);
+INSERT INTO trek_mountain_bikes VALUES (6, "Roscoe 6", "men", 1299, 17);
+INSERT INTO trek_mountain_bikes VALUES (7, "Roscoe 7", "men", 1549, 21);
+INSERT INTO trek_mountain_bikes VALUES (8, "X-Caliber 8", "men", 1599, 45);
+INSERT INTO trek_mountain_bikes VALUES (9, "X-Caliber 9", "men", 1999, 106);
+INSERT INTO trek_mountain_bikes VALUES (10, "Roscoe 8", "men", 2099, 13);
+INSERT INTO trek_mountain_bikes VALUES (11, "Farley 5", "men", 2149, 204);
+INSERT INTO trek_mountain_bikes VALUES (12, "Procaliber 9.5", "men", 2749, 140);
+INSERT INTO trek_mountain_bikes VALUES (13, "Fuel EX 5", "men", 2799, 16);
+INSERT INTO trek_mountain_bikes VALUES (14, "Farley 7", "men", 3099, 22);
+INSERT INTO trek_mountain_bikes VALUES (15, "1120", "men", 3449, 33);
+INSERT INTO trek_mountain_bikes VALUES (16, "Fuel EX 7", "men", 3499, 15);
+INSERT INTO trek_mountain_bikes VALUES (17, "Top Fuel 7 SX", "men", 3499, 26);
+INSERT INTO trek_mountain_bikes VALUES (18, "Procaliber 9.6", "men", 3499, 89);
+INSERT INTO trek_mountain_bikes VALUES (19, "Top Fuel 8 NX", "men", 3999, 95);
+INSERT INTO trek_mountain_bikes VALUES (20, "Farley 9.6", "men", 4099, 43);
+
+SELECT * FROM trek_mountain_bikes;
+SELECT SUM(quantity_available) FROM trek_mountain_bikes;
+SELECT bike_name, SUM(quantity_available) FROM trek_mountain_bikes GROUP BY bike_name;
